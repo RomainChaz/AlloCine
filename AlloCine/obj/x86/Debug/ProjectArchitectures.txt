@@ -1,0 +1,1 @@
+D:\Documents\Projet\NET\AlloCine\AlloCine\AlloCine.csproj;x86
