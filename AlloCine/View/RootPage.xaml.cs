@@ -33,6 +33,25 @@ namespace AlloCine.View
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-        }            
+        }
+        
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame myFrame = this.MySplitView.Content as Frame;
+            if (myFrame.CanGoBack)
+            {
+                myFrame.GoBack();
+            }
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            (MySplitView.Content as Frame).Navigate(typeof(MainPage));
+        }
+
+        private void CompteButton_Click(object sender, RoutedEventArgs e)
+        {
+            (MySplitView.Content as Frame).Navigate(typeof(ComptePage));
+        }
     }
 }

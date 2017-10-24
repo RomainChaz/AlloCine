@@ -132,17 +132,19 @@ namespace AlloCine.AlloCine_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "AlloCine.View.MainPage";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "AlloCine.View.ComptePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "AlloCine.View.RootPage";
+            _typeNameTable[3] = "AlloCine.View.MainPage";
+            _typeNameTable[4] = "AlloCine.View.RootPage";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::AlloCine.View.MainPage);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::AlloCine.View.ComptePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::AlloCine.View.RootPage);
+            _typeTable[3] = typeof(global::AlloCine.View.MainPage);
+            _typeTable[4] = typeof(global::AlloCine.View.RootPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,7 +179,8 @@ namespace AlloCine.AlloCine_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::AlloCine.View.MainPage(); }
+        private object Activate_0_ComptePage() { return new global::AlloCine.View.ComptePage(); }
+        private object Activate_3_MainPage() { return new global::AlloCine.View.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -189,9 +192,9 @@ namespace AlloCine.AlloCine_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  AlloCine.View.MainPage
+            case 0:   //  AlloCine.View.ComptePage
                 userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_ComptePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -204,7 +207,14 @@ namespace AlloCine.AlloCine_XamlTypeInfo
                 xamlType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  AlloCine.View.RootPage
+            case 3:   //  AlloCine.View.MainPage
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  AlloCine.View.RootPage
                 userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.SetIsLocalType();
                 xamlType = userType;

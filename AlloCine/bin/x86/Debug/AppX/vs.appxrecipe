@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-23T14:18:19.187</Modified>
+      <Modified>2017-10-24T06:09:33.971</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\AlloCine.exe">
       <PackagePath>entrypoint\AlloCine.exe</PackagePath>
-      <Modified>2017-10-23T14:18:18.498</Modified>
+      <Modified>2017-10-24T06:09:32.564</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\romai\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,9 +495,9 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-10-23T13:22:51.340</Modified>
+    <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\Assets\logo-allocine.png">
+      <PackagePath>Assets\logo-allocine.png</PackagePath>
+      <Modified>2017-10-23T13:28:06.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -533,9 +533,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T11:42:22.371</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2017-10-23T13:22:51.340</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\AlloCine.xr.xml">
       <PackagePath>AlloCine.xr.xml</PackagePath>
-      <Modified>2017-10-23T14:18:18.337</Modified>
+      <Modified>2017-10-23T15:24:16.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +548,11 @@
     <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-23T14:18:19.006</Modified>
+      <Modified>2017-10-24T06:09:33.487</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\Core\AlloCine.exe">
       <PackagePath>AlloCine.exe</PackagePath>
-      <Modified>2017-10-23T14:18:19.181</Modified>
+      <Modified>2017-10-24T06:09:33.971</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

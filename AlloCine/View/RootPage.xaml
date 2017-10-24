@@ -15,12 +15,12 @@
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="Back" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;"
-                    Width="50" Height="50" Background="Transparent"/>
+                    Width="50" Height="50" Background="Transparent" Click="BackButton_Click"/>
                     <TextBlock Text="Précédent" FontSize="18" VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="Home" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Height="50" Background="Transparent"/>
+                        Width="50" Height="50" Background="Transparent" Click="HomeButton_Click"/>
                     <TextBlock Text="Home" FontSize="18" VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -30,7 +30,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="Compte" FontFamily="Segoe MDL2 Assets" Content="&#59599;"
-                        Width="50" Height="50" Background="Transparent"/>
+                        Width="50" Height="50" Background="Transparent" Click="CompteButton_Click"/>
                     <TextBlock Text="Compte" FontSize="18" VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

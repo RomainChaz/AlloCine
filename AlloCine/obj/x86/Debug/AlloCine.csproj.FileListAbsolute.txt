@@ -218,3 +218,8 @@ D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\MainPage.xbf
 D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\RootPage.xbf
 D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\View\MainPage.xbf
 D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\View\RootPage.xbf
+D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\ComptePage.g.i.cs
+D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\ComptePage.g.cs
+D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\ComptePage.xaml
+D:\Documents\Projet\NET\AlloCine\AlloCine\obj\x86\Debug\View\ComptePage.xbf
+D:\Documents\Projet\NET\AlloCine\AlloCine\bin\x86\Debug\View\ComptePage.xbf
