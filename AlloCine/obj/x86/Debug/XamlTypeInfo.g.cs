@@ -132,19 +132,29 @@ namespace AlloCine.AlloCine_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "AlloCine.View.ComptePage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "AlloCine.View.MainPage";
-            _typeNameTable[4] = "AlloCine.View.RootPage";
+            _typeNameTable = new string[10];
+            _typeNameTable[0] = "AlloCine.ViewModel.ViewModelLocator";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "AlloCine.ViewModel.CompteViewModel";
+            _typeNameTable[3] = "GalaSoft.MvvmLight.ViewModelBase";
+            _typeNameTable[4] = "GalaSoft.MvvmLight.ObservableObject";
+            _typeNameTable[5] = "AlloCine.View.ComptePage";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[7] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[8] = "AlloCine.View.MainPage";
+            _typeNameTable[9] = "AlloCine.View.RootPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::AlloCine.View.ComptePage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::AlloCine.View.MainPage);
-            _typeTable[4] = typeof(global::AlloCine.View.RootPage);
+            _typeTable = new global::System.Type[10];
+            _typeTable[0] = typeof(global::AlloCine.ViewModel.ViewModelLocator);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::AlloCine.ViewModel.CompteViewModel);
+            _typeTable[3] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
+            _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
+            _typeTable[5] = typeof(global::AlloCine.View.ComptePage);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[8] = typeof(global::AlloCine.View.MainPage);
+            _typeTable[9] = typeof(global::AlloCine.View.RootPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,8 +189,11 @@ namespace AlloCine.AlloCine_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_ComptePage() { return new global::AlloCine.View.ComptePage(); }
-        private object Activate_3_MainPage() { return new global::AlloCine.View.MainPage(); }
+        private object Activate_0_ViewModelLocator() { return new global::AlloCine.ViewModel.ViewModelLocator(); }
+        private object Activate_2_CompteViewModel() { return new global::AlloCine.ViewModel.CompteViewModel(); }
+        private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
+        private object Activate_5_ComptePage() { return new global::AlloCine.View.ComptePage(); }
+        private object Activate_8_MainPage() { return new global::AlloCine.View.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -192,29 +205,59 @@ namespace AlloCine.AlloCine_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  AlloCine.View.ComptePage
-                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_ComptePage;
+            case 0:   //  AlloCine.ViewModel.ViewModelLocator
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_ViewModelLocator;
+                userType.AddMemberName("Compte");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  AlloCine.View.MainPage
-                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+            case 2:   //  AlloCine.ViewModel.CompteViewModel
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  AlloCine.View.RootPage
+            case 3:   //  GalaSoft.MvvmLight.ViewModelBase
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ObservableObject"));
+                xamlType = userType;
+                break;
+
+            case 4:   //  GalaSoft.MvvmLight.ObservableObject
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_ObservableObject;
+                xamlType = userType;
+                break;
+
+            case 5:   //  AlloCine.View.ComptePage
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_ComptePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  AlloCine.View.MainPage
+                userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  AlloCine.View.RootPage
                 userType = new global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -224,11 +267,26 @@ namespace AlloCine.AlloCine_XamlTypeInfo
         }
 
 
+        private object get_0_ViewModelLocator_Compte(object instance)
+        {
+            var that = (global::AlloCine.ViewModel.ViewModelLocator)instance;
+            return that.Compte;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::AlloCine.AlloCine_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "AlloCine.ViewModel.ViewModelLocator.Compte":
+                userType = (global::AlloCine.AlloCine_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AlloCine.ViewModel.ViewModelLocator");
+                xamlMember = new global::AlloCine.AlloCine_XamlTypeInfo.XamlMember(this, "Compte", "AlloCine.ViewModel.CompteViewModel");
+                xamlMember.Getter = get_0_ViewModelLocator_Compte;
+                xamlMember.SetIsReadOnly();
+                break;
+            }
             return xamlMember;
         }
     }

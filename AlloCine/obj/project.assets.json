@@ -25304,7 +25304,7 @@
       },
       "MvvmLight": {
         "target": "Package",
-        "version": "[5.3.0, )"
+        "version": "5.3.0"
       }
     },
     "frameworks": {
@@ -25317,6 +25317,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "5.4.0"
+          },
+          "MvvmLight": {
+            "target": "Package",
+            "version": "5.3.0"
           }
         }
       }

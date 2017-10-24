@@ -3,7 +3,12 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AlloCine"
+    xmlns:vm="using:AlloCine.ViewModel"
     RequestedTheme="dark">
 
+    <Application.Resources>
+        <!--Global View Model Locator-->
+        <vm:ViewModelLocator x:Key="Locator"/>
+    </Application.Resources>
 </Application>
 

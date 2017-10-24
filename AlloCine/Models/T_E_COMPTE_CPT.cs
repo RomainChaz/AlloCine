@@ -7,14 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace WSFilms.Models.Entity
-{
+{    
     using System;
     using System.Collections.Generic;
     
     public partial class T_E_COMPTE_CPT
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]        
         public T_E_COMPTE_CPT()
         {
             this.AvisCompte = new HashSet<T_E_AVIS_AVI>();
