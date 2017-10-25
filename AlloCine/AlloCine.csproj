@@ -99,8 +99,12 @@
     <Compile Include="Models\T_E_COMPTE_CPT.cs" />
     <Compile Include="Models\T_E_FILM_FLM.cs" />
     <Compile Include="Service\WSService.cs" />
+    <Compile Include="ViewModel\AddCompteViewModel.cs" />
     <Compile Include="ViewModel\CompteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AddComptePage.xaml.cs">
+      <DependentUpon>AddComptePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ComptePage.xaml.cs">
       <DependentUpon>ComptePage.xaml</DependentUpon>
     </Compile>
@@ -135,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AddComptePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\ComptePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

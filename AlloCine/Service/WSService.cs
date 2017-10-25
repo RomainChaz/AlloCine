@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using WSFilms.Models.Entity;
 
 namespace AlloCine.Service
@@ -27,6 +28,13 @@ namespace AlloCine.Service
             if (response.IsSuccessStatusCode)
             {
                 compte = await response.Content.ReadAsAsync<T_E_COMPTE_CPT>();
+                var messageDialog = new MessageDialog("Utilisateur récupéré");
+                await messageDialog.ShowAsync();
+            }
+            else
+            {
+                var messageDialog = new MessageDialog("Problème lors de la récupération");
+                await messageDialog.ShowAsync();
             }
 
             return compte;
@@ -34,11 +42,37 @@ namespace AlloCine.Service
 
         public static async Task<T_E_COMPTE_CPT> updateCompte(T_E_COMPTE_CPT compte)
         {
-            HttpResponseMessage response = await client.PutAsJsonAsync(string.Concat("compte?id=", compte.CPT_ID), compte);
+            HttpResponseMessage response = await client.PutAsJsonAsync(string.Concat("Compte/", compte.CPT_ID), compte);
 
             if (response.IsSuccessStatusCode)
             {
                 compte = await response.Content.ReadAsAsync<T_E_COMPTE_CPT>();
+                var messageDialog = new MessageDialog("Utilisateur modifié");
+                await messageDialog.ShowAsync();
+            }
+            else
+            {
+                var messageDialog = new MessageDialog("Problème lors de la modification");
+                await messageDialog.ShowAsync();
+            }
+
+            return compte;
+        }
+
+        public static async Task<T_E_COMPTE_CPT> addCompte(T_E_COMPTE_CPT compte)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync(string.Concat("Compte/"), compte);
+
+            if (response.IsSuccessStatusCode)
+            {
+                compte = await response.Content.ReadAsAsync<T_E_COMPTE_CPT>();
+                var messageDialog = new MessageDialog("Utilisateur ajouté");
+                await messageDialog.ShowAsync();
+            }
+            else
+            {
+                var messageDialog = new MessageDialog("Problème lors de l'ajout");
+                await messageDialog.ShowAsync();
             }
 
             return compte;

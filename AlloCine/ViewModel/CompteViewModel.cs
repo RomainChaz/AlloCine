@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using WSFilms.Models.Entity;
 using System.Windows.Input;
+using AlloCine.View;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace AlloCine.ViewModel
 {
@@ -48,9 +51,11 @@ namespace AlloCine.ViewModel
             CompteSearch = new T_E_COMPTE_CPT();
         }
 
-        private async void ActionNewData()
+        private void ActionNewData()
         {
-
+            RootPage r = (RootPage)Window.Current.Content;
+            SplitView sv = (SplitView)(r.Content);
+            (sv.Content as Frame).Navigate(typeof(AddComptePage));
         }
         private async void ActionGetData()
         {

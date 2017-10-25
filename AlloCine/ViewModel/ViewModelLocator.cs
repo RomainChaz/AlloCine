@@ -26,5 +26,7 @@ namespace AlloCine.ViewModel
         /// Gets the Main property.
         /// </summary>
         public CompteViewModel Compte => ServiceLocator.Current.GetInstance<CompteViewModel>();
+
+        public AddCompteViewModel AddCompte => ServiceLocator.Current.GetInstance<AddCompteViewModel>();
     }
 }
